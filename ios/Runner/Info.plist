@@ -2,10 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Mouselink connects to the desktop app on your computer over Wi-Fi.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Pick a wallpaper for the remote or a photo to copy to your computer.</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Gyro mouse moves the cursor when you tilt your phone.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Remote Mouse App</string>
+	<string>Mouselink</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
