@@ -10,7 +10,8 @@ class ConnectView extends GetView<ConnectController> {
   const ConnectView({super.key});
 
   static const _steps = [
-    'Run the Mouselink desktop app and press Start Server.',
+    'Install the MouseLink desktop app from https://mouselink.vercel.app.',
+    'Run the MouseLink desktop app and press Start Server.',
     'Make sure this phone is on the same Wi-Fi.',
     'Pick your computer below or type the IP shown in the desktop app.',
   ];
@@ -62,8 +63,7 @@ class ConnectView extends GetView<ConnectController> {
                                   shape: BoxShape.circle,
                                 ),
                                 child: Text('${i + 1}',
-                                    style: const TextStyle(
-                                        color: AppColors.primaryLight, fontWeight: FontWeight.w700, fontSize: 12)),
+                                    style: const TextStyle(color: AppColors.primaryLight, fontWeight: FontWeight.w700, fontSize: 12)),
                               ),
                               const SizedBox(width: 12),
                               Expanded(child: Text(step, style: text.bodyMedium?.copyWith(height: 1.4))),
@@ -84,8 +84,7 @@ class ConnectView extends GetView<ConnectController> {
                           padding: EdgeInsets.all(12),
                           child: SizedBox.square(dimension: 20, child: CircularProgressIndicator(strokeWidth: 2)),
                         )
-                      : IconButton(
-                          icon: const Icon(Icons.refresh_rounded), onPressed: controller.scan, tooltip: 'Scan')),
+                      : IconButton(icon: const Icon(Icons.refresh_rounded), onPressed: controller.scan, tooltip: 'Scan')),
                 ],
               ),
               Obx(() {
@@ -116,8 +115,7 @@ class ConnectView extends GetView<ConnectController> {
                       Card(
                         child: ListTile(
                           contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
-                          leading:
-                              GradientIcon(host.os == 'Darwin' ? Icons.laptop_mac : Icons.desktop_windows, size: 40),
+                          leading: GradientIcon(host.os == 'Darwin' ? Icons.laptop_mac : Icons.desktop_windows, size: 40),
                           title: Text(host.name, style: const TextStyle(fontWeight: FontWeight.w600)),
                           subtitle: Text('${host.address}:${host.port}'),
                           trailing: const Icon(Icons.chevron_right_rounded),
@@ -167,15 +165,13 @@ class ConnectView extends GetView<ConnectController> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16),
                     boxShadow: [
-                      BoxShadow(
-                          color: AppColors.primary.withValues(alpha: 0.4), blurRadius: 20, offset: const Offset(0, 6)),
+                      BoxShadow(color: AppColors.primary.withValues(alpha: 0.4), blurRadius: 20, offset: const Offset(0, 6)),
                     ],
                   ),
                   child: FilledButton.icon(
                     onPressed: connecting ? null : controller.connect,
                     icon: connecting
-                        ? const SizedBox.square(
-                            dimension: 18, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
+                        ? const SizedBox.square(dimension: 18, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
                         : const Icon(Icons.link_rounded),
                     label: Text(connecting ? 'Connecting…' : 'Connect'),
                     style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(56)),

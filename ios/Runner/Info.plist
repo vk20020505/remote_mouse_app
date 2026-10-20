@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocalNetworkUsageDescription</key>
-	<string>Mouselink connects to the desktop app on your computer over Wi-Fi.</string>
+	<string>MouseLink connects to the desktop app on your computer over Wi-Fi.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Pick a wallpaper for the remote or a photo to copy to your computer.</string>
 	<key>NSMotionUsageDescription</key>
@@ -11,7 +11,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Mouselink</string>
+	<string>MouseLink</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
